@@ -1,0 +1,101 @@
+#targTempTitle{
+	text-align: right;
+	padding-right:1em;
+	padding-top:.2em;
+	padding-bottom:.2em;
+	color: #0D401B;
+	font-family: LiberationSans-Bold;
+}
+#whatSchedText{
+	text-align: center;
+	padding-right:1em;
+	padding-top:.2em;
+	padding-bottom:.2em;
+	color: #0D401B;
+	font-family: LiberationSans-Bold;
+	font-size: 1.5em;
+}
+.inlineSection{
+	display: inline-block;
+}
+.vertAlignText{
+	vertical-align: middle;
+}
+#tempContainer{
+	height:auto;
+	background-color: blue;
+}
+#controlPanel{
+	background-color:#28BF51;
+	margin-left:0;
+	margin-right:0;
+	height:auto;
+	width:auto;
+	float:right;
+}
+#thermostatChoice{
+	width:100% !important;
+}
+#tempChangeSection{
+	background-color:#28BF51;
+}
+@media(max-width:767px){
+	#thermostatGraphic{
+	width:auto;
+	height:20em;
+	margin-left:0em;
+	margin-right:0em;
+	}
+	#targTempTitle{
+		font-size: 1.3em;
+	}
+	#controlPanel{
+		margin-right:.25em;
+		padding:.3em;
+		min-width:12em;
+	}
+	#tempChangeSection{
+		padding:.3em
+	}
+}
+#tempTextC{
+	font-size:3em;
+	padding-left:.25em;
+}
+#tempTextF{
+	font-size:2em;
+	padding-left:.25em;
+}
+@media(min-width:768px){
+#thermostatGraphic{
+	width:auto;
+	height:25em;
+	}
+	#targTempTitle{
+		font-size: 2em;
+	}
+	#controlPanel{
+		padding: 1em;
+		min-width:25em;
+		margin-right:1em;
+	}
+	#tempChangeSection{
+		padding:1em
+	}
+}
+@media(min-width:992px){
+	#thermostatGraphic{
+	width:auto;
+	height:30em;
+	}
+	#targTempTitle{
+		font-size: 2.6em;
+	}
+	#controlPanel{
+		
+		min-width:34em;
+		margin-right:2em;
+	}
+}
+@media(min-width:1200px){
+}
