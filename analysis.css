@@ -1,12 +1,24 @@
 @CHARSET "utf-8";
 
 body{
-	margin:0;
+	background-color: #BFA;
+}
+
+.title{
+	padding:0.5em;
+	font-size:1.25em;
+}
+
+.graphSpace{
+	position:relative;
+	background-color:#FFF;
+	padding-bottom:0.2em;
+	border:0.5em solid #3B3;
 }
 
 .frameContainer {
 	position: relative;
-	padding-bottom: 40%;
+	padding-bottom: calc(40% + 2px);
 	overflow:hidden;
 }
 
@@ -20,8 +32,8 @@ body{
 
 .lowerGraphLabels{
 	position:relative;
-	left:30%;
-	width:70%;
+	left:20%;
+	width:80%;
 }
 
 .horizontalMarkerContainer{
@@ -29,14 +41,27 @@ body{
 	justify-content: space-around;
 }
 
-.horizontalMarker{
-	//display:inline-flex;
-}
-
 .map{
 	font-size:1.2em;
 }
 
+.recommendation{
+	font-size:1.2em;
+	padding:0.5em;
+}
+
+.recommendations{
+	font-size:0.9em;
+}
+
 .lowerOptions{
-	background-color: #0B0;
+	background-color: #3B3;
+	padding:0.5em;
+}
+
+.button{
+	margin: 0.5em;
+	font-size:1em;
+	width:8em;
+	height:2em;
 }

@@ -5,7 +5,6 @@
 <link href="graph.css" rel="stylesheet">
 </head>
 <body>
-<div>
 <div class="leftLabels">
 	<div class="verticalText">
 	<br>
@@ -28,10 +27,23 @@
 	    </filter>
 	  </defs>
 	
-		<polyline class="line" style="stroke:red" points="0,40 20,20 40,40 60,40, 80,30 100, 40" />
-		<polyline class="line" style="stroke:blue;stroke-dasharray:4,6" points="0,30 20,40 40,20 60,20, 80,30 100, 30" />
+		<polyline class="line" style="stroke:red" points="0,40 20,20 40,40 60,40, 80,30 100,40" />
+		<polyline class="line" style="stroke:blue;stroke-dasharray:4,6" points="0,30 20,40 40,20 60,20, 80,30 100,30" />
 	</svg>
-	
-	</div>
+</div>
+
+<script>
+var elems=document.getElementsByClassName("line");
+var text="";
+var text2="";
+var i;
+for (i=0;i<=100;i+=20){
+	var num=Math.random()*40+5;
+	text+=i+","+(num)+" ";
+	text2+=i+","+(num+Math.random()*10-5)+" ";
+}
+elems[0].setAttribute("points", text);
+elems[1].setAttribute("points", text2);
+</script>
 </body>
 </html>
