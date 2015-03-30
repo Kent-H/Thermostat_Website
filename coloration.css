@@ -28,8 +28,7 @@
 .containerColor{
 	background-color:#C0FFCF;
 }
-.container
-{
+.container{
     min-width: 340px !important;
 }
 .navbar-default .navbar-brand {

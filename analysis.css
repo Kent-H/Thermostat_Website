@@ -13,7 +13,7 @@ body{
 	position:relative;
 	background-color:#FFF;
 	padding-bottom:0.2em;
-	border:0.5em solid #3B3;
+	border:0.5em solid #28BF51;
 }
 
 .frameContainer {
@@ -55,7 +55,7 @@ body{
 }
 
 .lowerOptions{
-	background-color: #3B3;
+	background-color: #28BF51;
 	padding:0.5em;
 }
 
