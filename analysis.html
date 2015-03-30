@@ -1,83 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<link href="analysis.css" rel="stylesheet">
-<title>Schedule Analysis</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Thermostat | </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/metisMenu.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap-timepicker.min.css" rel="stylesheet">
+	<link href="css/bootstrap-touchspin.css" rel="stylesheet">
+	
+	<link href="analysis.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
 
-<div class="title">
-Analysis of your schedule: <span id="name">Schedule_1</span>
-</div>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+				<ul class="nav navbar-top-links navbar-right pull-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<i class="fa fa-user fa-fw"></i> Username <i class="fa fa-caret-down"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-user">
+							<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+							</li>
+							<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+							</li>
+							<li class="divider"></li>
+							<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+                <a class="navbar-brand" href="index.html">Thermostat</a>
+            </div>
+			<!-- / Navigation Header -->
 
-<div class="graphSpace">
-<div class="frameContainer">
-	<iframe id="graph" class="graph" src="graph.html" seamless frameborder="0"></iframe>
-</div>
+            <ul class="nav navbar-top-links navbar-right">
+			<li class="dropdown">
+                    <a href="thermostats.html" class="btn">
+                       Thermostats
+                    </a>
+			</li>
 
-	<div class="lowerGraphLabels">
-		<div class="horizontalMarkerContainer">
-			<div class="horizontalMarker">
-			Wake Up
-			</div>
-			<div class="horizontalMarker">
-			Leave
-			</div>
-			<div class="horizontalMarker">
-			Return
-			</div>
-			<div class="horizontalMarker">
-			Sleep
-			</div>
-		</div>
-		<div style="text-align:center;font-size:1.2em">
-			Time Frame
-		</div>
-		<div class="map">
-			<svg width="1em" height="1em" viewBox="0 0 20 20">
-				<rect width="20" height="20" style="fill:red;"/>
-			</svg>
-			User Schedule
-			<svg width="1em" height="1em" viewBox="0 0 20 20">
-				<rect width="20" height="20" style="fill:blue;"/>
-			</svg>
-			Recommended Settings
-			</div>
-	</div>
-</div>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-calendar fa-fw"></i> Schedules <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts dropdown-menu-left">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-clock-o fa-fw"></i> History <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+				<li class="dropdown">
+				<a href="index.html" class="btn">
+                       <i class="fa fa-home fa-fw"></i> Home
+                </a>
+				</li>
+            </ul>
+            <!-- /.navbar-top-links -->
 
-<div class="recommendation">
-	Recommendations:
-	
-	<select class="recommendations" onchange="changed(this)">
-		<option>Schedule_1</option>
-		<option>Tom's Summer Schedule</option>
-	</select>
-</div>
+        </nav>
 
-<div class="lowerOptions">
-	[SCHEDLE WITH > SAVING] Saves you $50
-	<br>
-	<br>
-	Use recommended schedule?
-	<br>
-	<input class="button" type="button" value="Use" onclick="confirmBox();"/>
-	<input class="button" type="button" value="Cancel" onclick="leave()"/>
-</div>
+        <!-- Page Content -->
+        <!--<div id="page-wrapper">-->
+        
+        <div class="title">
+				Analysis of your schedule: <span id="name">Schedule_1</span>
+				</div>
+				
+         <div class="graphSpace">
+				<div class="frameContainer">
+					<iframe id="graph" class="graph" src="graph.html" seamless frameborder="0"></iframe>
+				</div>
+				
+					<div class="lowerGraphLabels">
+						<div class="horizontalMarkerContainer">
+							<div class="horizontalMarker">
+							Wake Up
+							</div>
+							<div class="horizontalMarker">
+							Leave
+							</div>
+							<div class="horizontalMarker">
+							Return
+							</div>
+							<div class="horizontalMarker">
+							Sleep
+							</div>
+						</div>
+						<div style="text-align:center;font-size:1.2em">
+							Time Frame
+						</div>
+						<div class="map">
+							<svg width="1em" height="1em" viewBox="0 0 20 20">
+								<rect width="20" height="20" style="fill:red;"/>
+							</svg>
+							User Schedule
+							<svg width="1em" height="1em" viewBox="0 0 20 20">
+								<rect width="20" height="20" style="fill:blue;"/>
+							</svg>
+							Recommended Settings
+							</div>
+					</div>
+				</div>
+				
+				<div class="recommendation">
+					Recommendations:
+					
+					<select class="recommendations" onchange="changed(this)">
+						<option>Schedule_1</option>
+						<option>Tom's Summer Schedule</option>
+					</select>
+				</div>
+				
+				<div class="lowerOptions">
+					[SCHEDLE WITH > SAVING] Saves you $50
+					<br>
+					<br>
+					Use recommended schedule?
+					<br>
+					<input class="button" type="button" value="Use" onclick="confirmBox();"/>
+					<input class="button" type="button" value="Cancel" onclick="leave()"/>
+				</div>
+				
+				<script>
+				function changed(elem){
+					document.getElementById('name').innerHTML=elem.value;
+					document.getElementById("graph").src="graph.html";
+				}
+				function confirmBox() {
+					 if (confirm("Are you sure you want to apply these settings?"))
+					   leave();
+				}
+				function leave(){
+					document.location.href = "homePage.html";
+				}
+				</script>
+        </div>
+        <!-- /#page-wrapper -->
 
-<script>
-function changed(elem){
-	document.getElementById('name').innerHTML=elem.value;
-	document.getElementById("graph").src="graph.html";
-}
-function confirmBox() {
-	 if (confirm("Are you sure you want to apply these settings?"))
-	   leave();
-}
-function leave(){
-	document.location.href = "homePage.html";
-}
-</script>
+    <!-- </div>
+    <!-- /#wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/metisMenu.min.js"></script>
+    <script src="js/theme.js"></script>
+	<script src="js/bootstrap-timepicker.min.js"></script>
+	<script src="js/bootstrap-touchspin.js"></script>
+    <script type="text/javascript">
+            $('#timepicker1').timepicker();
+			$('#timepicker2').timepicker();
+			$('#timepicker3').timepicker();
+			$('#timepicker4').timepicker();
+    </script>
+	        <script>
+            $("input[name='temp']").TouchSpin({
+                min: 10,
+                max: 45,
+                step: 0.5,
+                decimals: 1,
+                boostat: 5,
+                maxboostedstep: 10,
+                postfix: '°C'
+            });
+        </script>
+
+
 </body>
+
 </html>
