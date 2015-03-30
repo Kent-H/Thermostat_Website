@@ -1,8 +1,48 @@
+@font-face{
+	font-family: LiberationSans-Regular;
+	src: url('fonts/LiberationSans-Regular.ttf');
+	
+}
+@font-face{
+	font-family: LiberationSans-Bold;
+	src: url('fonts/LiberationSans-Bold.ttf');
+}
+@font-face{
+	font-family: LiberationSans-Italic;
+	src: url('fonts/LiberationSans-Italic.ttf');
+}
+@font-face{
+	font-family: LiberationSans-BoldItalic;
+	src: url('fonts/LiberationSans-BoldItalic.ttf');
+}
+#targTempTitle{
+	font-size:2em;
+	text-align: right;
+	padding-right:3em;
+	padding-top:.2em;
+	padding-bottom:.2em;
+	color: #0D401B;
+	font-family: LiberationSans-Bold;
+}
+ body{
+	font-family: LiberationSans-Regular;
+ }
+.active a{
+	background-color:#1B7F36 !important;
+	color: #35FF6C !important;
+	font-family:LiberationSans-Bold;
+ }
 .containerColor{
+	
 	background-color:#C0FFCF;
 }
 .navbar-default .navbar-brand {
+	font-family: LiberationSans-Bold;
+	font-size:1.5em;
   color: #0D401B;
+}
+.navbar-nav .nav{
+	color: #0D401B;
 }
 .logoutButton{
 	background-color: #16CCAE;
