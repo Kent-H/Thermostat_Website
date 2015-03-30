@@ -6,8 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="coloration.css">
+		<link rel="stylesheet" href="homeLayout.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="/js/Bootstrap/Select/bootstrap-select.js"></script>
+		
 	</head>
 	<body>
 	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -23,7 +26,8 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-				<li><div class="dropdown">
+				<li>
+				<div class="dropdown">
 					<button class = "btn btn-default dropdown-toggle" type ="button" id="dropdownMenu1" data-Toggle="dropdown" aria-expanded="true">
 					Account Name <span class="caret"></span>
 					</button>
@@ -34,7 +38,8 @@
 						<li role = "presentation" class="divider"></li>
 						<li role = "presentation" class="logoutButton"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
 					</ul>
-				</div></li>
+				</div>
+				</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-left">
 					<li class="active"><a href="#">Home</a></li>
@@ -56,13 +61,50 @@
 					</li>
 				</ul>
 			</div>
-			</div><br>
-			<div class = "container containerColor">
-				<div id="targTempTitle">
-				Your Target Temperature Is
-				<p></p>
-				</div>
-			</div>
 		</div>
+	</div>
+	<div class = "container containerColor">
+		<p id="targTempTitle">
+		Your Target Temperature Is
+		</p>
+		<div id="thermostatSection">
+			<img  id="thermostatGraphic"src="images/thermostatGraphic.svg"></img>
+			<table id="controlPanel" class="inlineSection">
+				<tr>
+					<td>
+						<button class= "btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button><br>
+						<button class= "btn btn-default"><span class="glyphicon glyphicon-chevron-down"></span></button>
+					</td>
+					<td>
+						<span class="inlineSection verticleAlignText" id="tempTextC">30°C</span> 
+					</td>
+					<td>
+						<span class ="inlineSection verticleAlignText" id="tempTextF">86°F<span>
+					</td>
+				</tr>
+				<tr >
+					<td colspan="3" class="verticleAlignText"><br>     
+						    <select class="selectpicker">
+							<option>Thermostat x</option>
+							<option>Thermostat y</option>
+							<option>Thermostat z</option>
+							</select>
+							<script type="text/javascript">
+								$(document).ready(function() {
+									$('.selectpicker').selectpicker();
+								});
+							</script>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><br><p id="whatSchedText">Running schedule Y</p></td>
+				</tr>
+			</table>
+		</div><br>
+		<div id="tempChangeSection">
+			<p>TEST</p>
+		</div>
+	</div>
 	</body>
 </html>
