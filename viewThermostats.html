@@ -55,7 +55,7 @@
 
             <ul class="nav navbar-top-links navbar-right">
 			<li class="dropdown">
-                    <a href="thermostats.html" class="btn">
+                    <a href="viewThermostats.html" class="btn">
                        Thermostats
                     </a>
 			</li>
@@ -65,56 +65,20 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-calendar fa-fw"></i> Schedules <i class="fa fa-caret-down"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-alerts dropdown-menu-left">
+                    <ul class="dropdown-menu dropdown-user dropdown-menu-left">
                         <li>
-                            <a href="#">
+                            <a href="viewSchedules.html">
                                 <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                     View Schedules
                                 </div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">
+                            <a href="schedule-create.html">
                                 <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                     Create Schedule
                                 </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
                     </ul>
@@ -126,22 +90,23 @@
                         <i class="fa fa-clock-o fa-fw"></i> History <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"> All</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="#"> Schedule</a>
                         </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="#"> Thermostat</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
                 <!-- /.dropdown -->
+				<div class="pull-right">
 				<li class="dropdown">
 				<a href="index.html" class="btn">
                        <i class="fa fa-home fa-fw"></i> Home
                 </a>
 				</li>
+				</div>
             </ul>
             <!-- /.navbar-top-links -->
 
@@ -165,7 +130,7 @@
 						<div class="table-responsive">
 						<table id="table" class="table table-bordered table-hover table-condensed  table-stripped" data-toggle="table" data-show-refresh="true">
         <thead>
-        <tr><th class="bs-checkbox " style=""><div style="height: 34px;"><div class="th-inner "><div class="th-inner "><input name="btSelectItem" type="checkbox">Select (all-delete only)</div></div><div class="fht-cell"></div></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"><div class="fht-cell"></div></div></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"><div class="fht-cell"></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"></div></div></th>
+        <tr><th class="bs-checkbox " style=""><div style="height: 34px;"><div class="th-inner "><div class="th-inner "><input name="btSelectItem" type="checkbox">Delete All</div></div><div class="fht-cell"></div></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"><div class="fht-cell"></div></div></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"><div class="fht-cell"></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"></div></div></th>
 		
 		<th style=""><div class="th-inner "><div style="height: 34px;"><div class="th-inner "><div class="th-inner sortable">Location</div><div class="fht-cell"></div></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"></div></div></div><div class="fht-cell"></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"></div></div><div class="fht-cell"></div><div style="margin: 0px 2px 2px; display: none;" class="filterControl"></div></th>
 
@@ -187,13 +152,13 @@
 					
 					<div class="dropdown btn-group">
 					  <button class="btn btn-default btn-primary active dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-						WeekDAY Schedule
+						Weekday Schedule
 						<span class="caret"></span>
 					  </button>
 					  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
-											  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Summer weekend</a></li>
-											  <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Summer day</a></li>
-											  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Winter-Fall day</a></li>
+											  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Summer Weekend</a></li>
+											  <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Summer Weekday</a></li>
+											  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Winter-Fall Weekday</a></li>
 											  <li role="presentation" class="divider"></li>
 											  <li role="presentation"><a role="menuitem" tabindex="-1" href="viewSchedules.html">All Schedule-TABLE</a></li>
 											</ul>
@@ -201,13 +166,13 @@
 					
 					<div class="dropdown btn-group">
 					  <button class="btn btn-default  btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-						WeekEND Schedule
+						Weekend Schedule
 						<span class="caret"></span>
 					  </button>
 					  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
-											  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Summer day</a></li>
-											  <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Summer weekend</a></li>
-											  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Winter-Fall day</a></li>
+											  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Summer Weekday</a></li>
+											  <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Summer Weekend</a></li>
+											  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Winter-Fall Weekday</a></li>
 											  <li role="presentation" class="divider"></li>
 											  <li role="presentation"><a role="menuitem" tabindex="-1" href="viewSchedules.html">All Schedule-TABLE</a></li>
 											</ul>
@@ -217,10 +182,10 @@
 						
 						<div class="btn-group btn-group-justified" role="group" aria-label="">
 						  <div class="btn-group" role="group">
-							<button type="button" class="btn btn-default btn-success btn-lg ">SAVE</button>
+							<button type="button" class="btn btn-default btn-success btn-lg ">Save</button>
 						  </div>
 						  <div class="btn-group" role="group">
-							<button type="button" class="btn btn-danger btn-default btn-sm">CANCEL</button>
+							<button type="button" class="btn btn-danger btn-default btn-lg">Cancel</button>
 						  </div>
 						</div>
 						</div>
