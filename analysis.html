@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="analysis.css" rel="stylesheet">
+<title>Insert title here</title>
+</head>
+<body>
+Analysis of your schedule: StandardSchedule
+
+<div class="frameContainer">
+	<iframe class="graph" src="graph.html" seamless frameborder="0"></iframe>
+</div>
+
+<div class="lowerGraphLabels">
+	<div class="horizontalMarkerContainer">
+		<div class="horizontalMarker">
+		Wake Up
+		</div>
+		<div class="horizontalMarker">
+		Leave
+		</div>
+		<div class="horizontalMarker">
+		Return
+		</div>
+		<div class="horizontalMarker">
+		Sleep
+		</div>
+	</div>
+	<div style="text-align:center;font-size:1.2em">
+		Time Frame
+	</div>
+	<div class="map">
+		<svg width="1em" height="1em" viewBox="0 0 20 20">
+			<rect width="20" height="20" style="fill:red;"/>
+		</svg>
+		User Schedule
+	<svg width="1em" height="1em" viewBox="0 0 20 20">
+			<rect width="20" height="20" style="fill:blue;"/>
+		</svg>
+		Recommended Settings
+		</div>
+</div>
+
+Recommendations:
+<select name="test">
+<option value="">
+</option>
+</select>
+<div class="lowerOptions">
+[SCHEDLE WITH > SAVING] Saves you $50
+<br>
+Use recommended schedule?
+<br>
+<input type="button" value="Use"/>
+<input type="button" value="Cancel"/>
+</div>
+</body>
+</html>
