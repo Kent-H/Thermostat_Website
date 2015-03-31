@@ -7,64 +7,104 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="coloration.css">
 		<link rel="stylesheet" href="homeLayout.css">
+		<link href="css/bootstrap-select.css" rel="stylesheet">
+		<link href="css/metisMenu.min.css" rel="stylesheet">
+  	    <link href="css/style.css" rel="stylesheet">
+   		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<title>Peaksaver Home</title>
 	</head>
 	<body>
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class = "container containerColor">
-			<div class = "navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle ="collapse" data-target=".navbar-collapse">
-				<span class="sr-only"></span>
-				<span class = "icon-bar"></span>
-				<span class = "icon-bar"></span>
-				<span class = "icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Peak Saver</a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-				<li>
-				<div class="dropdown">
-					<button class = "btn btn-default dropdown-toggle" type ="button" id="dropdownMenu1" data-Toggle="dropdown" aria-expanded="true">
-					Account Name <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-						<li role = "presentation"><a role="menuitem" tabindex="-1" href="#">Change Password</a></li>
-						<li role = "presentation"><a role="menuitem" tabindex="-1" href="#">Manage User</a></li>
-						<li role = "presentation"><a role="menuitem" tabindex="-1" href="#">My Contact Info</a></li>
-						<li role = "presentation" class="divider"></li>
-						<li role = "presentation" class="logoutButton"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
-					</ul>
-				</div>
+	<div id="wrapper">
+	 <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+				<ul class="nav navbar-top-links navbar-right pull-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<i class="fa fa-user fa-fw"></i> Username <i class="fa fa-caret-down"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-user">
+							<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+							</li>
+							<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+							</li>
+							<li class="divider"></li>
+							<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+                <a class="navbar-brand" href="homePage.html">Peaksaver Home</a>
+            </div>
+			<!-- / Navigation Header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+			<li class="dropdown">
+                    <a href="viewThermostats.html" class="btn">
+                       Thermostats
+                    </a>
+			</li>
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-calendar fa-fw"></i> Schedules <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user dropdown-menu-left">
+                        <li>
+                            <a href="viewSchedules.html">
+                                <div>
+                                     View Schedules
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="schedule-create.html">
+                                <div>
+                                     Create Schedule
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-clock-o fa-fw"></i> History <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"> All</a>
+                        </li>
+                        <li><a href="#"> Schedule</a>
+                        </li>
+                        <li><a href="#"> Thermostat</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+				<div class="pull-right">
+				<li class="dropdown">
+				<a href="index.html" class="btn">
+                       <i class="fa fa-home fa-fw"></i> Home
+                </a>
 				</li>
-				</ul>
-				<ul class="nav navbar-nav navbar-left">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Thermostats</a></li>
-					<li class="dropdown">
-					<a class="dropdown-toggle"  data-toggle="dropdown" href="#" id="scheduleDropdown">Schedule<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="scheduleDropdown">
-						<li role = "presentation"><a role="menuitem" tabindex="-1" href="#">View All</a></li>
-						<li role = "presentation"><a role="menuitem" tabindex="-1" href="#">Create</a></li>
-						</ul>
-					</li>
-					<li class="dropdown">
-					<a class="dropdown-toggle"  data-toggle="dropdown" href="#" id="historyDropdown">History<span class="caret"></span></a>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="historyDropdown">
-						<li role = "presentation"><a role="menuitem" tabindex="-1" href="#">All</a></li>
-						<li role = "presentation"><a role="menuitem" tabindex="-1" href="#">Schedule</a></li>
-						<li role = "presentation"><a role="menuitem" tabindex="-1" href="#">Thermostats</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class = "container containerColor">
-		<p id="targTempTitle">
+				</div>
+            </ul>
+            <!-- /.navbar-top-links -->
+        </nav>
+        
+	<div class = "container">
+	<table id="controlSection">
+	<img  id="thermostatGraphic" src="images/thermostatGraphic.svg"></img>
+		<tr><td><p id="targTempTitle">
 		Your Target Temperature Is
-		</p>
-		<div id="thermostatSection">
-			<img  id="thermostatGraphic"src="images/thermostatGraphic.svg"></img>
+		</p></td></tr>
+		<tr><td><div id="thermostatSection">
+			
 			<table id="controlPanel" class="inlineSection">
 				<tr>
 					<td>
@@ -75,7 +115,7 @@
 						<span class="inlineSection verticleAlignText" id="tempTextC">30°C</span> 
 					</td>
 					<td>
-						<span class ="inlineSection verticleAlignText" id="tempTextF">86°F<span>
+						<span class ="inlineSection verticleAlignText" id="tempTextF">86°F</span>
 					</td>
 				</tr>
 				<tr >
@@ -84,26 +124,65 @@
 							<option>Thermostat x</option>
 							<option>Thermostat y</option>
 							<option>Thermostat z</option>
-							</select>
-							<script type="text/javascript">
-								$(document).ready(function() {
-									$('.selectpicker').selectpicker();
-								});
-							</script>
+							</select>					
 						<br>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="3"><br><p id="whatSchedText">Running schedule Y</p></td>
+					<td colspan="3"><br>
+							<p class="schedText">Running schedule </p>
+							<p class="schedText">"AAAAAAAAAAAAAAAAAAAA"</p>
+						</td>
 				</tr>
 			</table>
-		</div><br>
+		</div></td></tr></table><br>
 		<div id="tempChangeSection">
-			<p>TEST</p>
+		<table id="settingsButtons">
+		<tr>
+			<td>Mode:</td>
+			<td class="buttonAlignment"> <div class="btn-group" data-toggle="buttons">
+ 				 <label class="btn btn-danger buttonSizing active"><input type="radio" value="heat">Heat</label>
+ 				 <label class="btn btn-info buttonSizing"><input type="radio" value="cool">Cool</label>
+ 				 <label class="btn btn-success buttonSizing"><input type="radio" value="heat">Auto</label>
+			</div><br>
+			</td>
+			</tr>
+			<tr>
+			<td><br>Fan:</td>
+			<td class="buttonAlignment">
+			<div class="btn-group" data-toggle="buttons"><br>
+ 				 <label class="btn btn-success buttonSizing active"><input type="radio" value="fanOn">On</label>
+ 				 <label class="btn btn-success buttonSizing"><input type="radio" value="fanCirculate">Circulate</label>
+ 				 <label class="btn btn-success buttonSizing"><input type="radio" value="fanAuto">Auto</label>
+			</div><br>
+			</td>
+			</tr>
+			<tr>
+				<td class="buttonAlignment" colspan="2">
+				<div class="btn-group"><br>
+  				<div  class="btn-group buttonSizing" role="group">
+   					 <button id="holdButton" type="button" class="btn btn-success dropdown-toggle" 
+   					 data-toggle="dropdown" aria-expanded="false">
+    				  Hold on
+    				  <span class="caret"></span>
+   					 </button>
+  				  <ul class="dropdown-menu" role="menu">
+     					 <li><a href="#">Hold on</a></li>
+     					 <li><a href="#">Hold off</a></li>
+    				</ul>
+ 				 </div>
+ 					<a type="button" class="btn btn-success buttonSizing">Send</a>
+ 					<a type="button" class="btn btn-success buttonSizing">Run Schedule</a>
+				</div><br>
+			</tr>
+			</table>
 		</div>
+	</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script src="/js/Bootstrap/Select/bootstrap-select.js"></script>
+	<script src="js/bootstrap-select.js"></script>
+	<script src="js/metisMenu.min.js"></script>
+    <script src="js/theme.js"></script>
 	</body>
 </html>
