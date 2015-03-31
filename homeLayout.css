@@ -71,7 +71,6 @@ label{
 	background-color: blue;
 }
 
-
 @media(max-width:767px){
 	#thermostatGraphic{
 	width:auto;
