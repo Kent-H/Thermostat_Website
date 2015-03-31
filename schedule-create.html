@@ -121,35 +121,47 @@
         </nav>
 
         <!-- Page Content -->
-        <div id="page-wrapper">
+
             <div class="container-fluid">
                 <div class="row">
 				
-                    <div class="col-lg-13">
+                    <div class="col-lg-10">
 					<br>
 						<div class="form-inline">
-					
-							<div class="col-xs-8 pull-left">
 								<div class="input-group">
 								  <span class="input-group-addon" id="sizing-addon2">Name</span>
 								  <input type="text" class="form-control" maxlength="25" placeholder="Required, up to 25 characters" aria-describedby="sizing-addon2">
 								</div>
-							</div>
-							<div class="col-xs-4 pull-right">
-						  <select class="selectpicker" data-width="100%">
-							  <option>Weekday</option>
-							  <option>Weekend</option>
-						  </select>
-							</div>
 							
 						</div>
 
                     </div>
 					
-				<br><br><br>
+				<br>
 				
-                    <div class="col-xs-12">
-
+						<div class="col-lg-12">
+						<div class="input-group">
+						<span class="input-group-addon" id="sizing-addon2">Select Default Template</span>
+						  <select class="selectpicker" data-width="100%">
+							  <option>Template 1</option>
+							  <option>Template 2</option>
+							  <option>Template 3</option>
+						  </select>
+						  </div>
+						</div>
+				<br>
+				<div class="col-lg-10">
+				
+<div role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Weekday</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Weekend</a></li>
+  </ul>
+<br>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
 							<form class="form-inline">
 								<div class="col-xs-6">
 									<div class="input-group bootstrap-timepicker">
@@ -210,21 +222,81 @@
 									</div>
 								</div>
 							</form>
+	
+	</div>
+	
+	
+	
+    <div role="tabpanel" class="tab-pane" id="profile">
+							<form class="form-inline">
+								<div class="col-xs-6">
+									<div class="input-group bootstrap-timepicker">
+										<span class="input-group-addon samewidth">Wake</span>
+										<input class="form-control" id="timepicker5" type="text">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="input-group">
+										<input id="temp" type="text" value="20" name="temp">
+									</div>
+								</div>
+							</form>
 							
-						</div>
+							<form class="form-inline">
+								<div class="col-xs-6">
+									<div class="input-group bootstrap-timepicker">
+										<span class="input-group-addon samewidth">Leave</span>
+										<input class="form-control" id="timepicker6" type="text">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="input-group">
+										<input id="temp" type="text" value="17" name="temp">
+									</div>
+								</div>
+							</form>
+							
+							<form class="form-inline">
+								<div class="col-xs-6">
+									<div class="input-group bootstrap-timepicker">
+										<span class="input-group-addon samewidth">Return</span>
+										<input class="form-control" id="timepicker7" type="text">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="input-group">
+										<input id="temp" type="text" value="18" name="temp">
+									</div>
+								</div>
+							</form>
+							
+							
+							<form class="form-inline">
+								<div class="col-xs-6">
+									<div class="input-group bootstrap-timepicker">
+										<span class="input-group-addon samewidth">Sleep</span>
+										<input class="form-control" id="timepicker8" type="text">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="input-group">
+										<input id="temp" type="text" value="16" name="temp">
+									</div>
+								</div>
+							</form>
+	</div>
+  </div>
+</div>
+</div>
+				
+
 						
 						<br><br><br><br><br><br><br><br>
 						
-						<div class="col-lg-12">
-						<div class="input-group">
-						<span class="input-group-addon" id="sizing-addon2">Select Default Template</span>
-						  <select class="selectpicker" data-width="100%">
-							  <option>Template 1</option>
-							  <option>Template 2</option>
-							  <option>Template 3</option>
-						  </select>
-						  </div>
-						</div>
 						<br><br>
 						<div class="col-lg-12">
 							<div class="btn-group pull-right" role="group" aria-label="...">
@@ -232,6 +304,7 @@
 							  <a class="btn btn-default btn-lg" href="viewSchedules.html">Submit</a>
 							</div>
 						</div>
+						
 					
                 </div>
                 <!-- /.row -->
@@ -256,6 +329,10 @@
 			$('#timepicker2').timepicker();
 			$('#timepicker3').timepicker();
 			$('#timepicker4').timepicker();
+            $('#timepicker5').timepicker();
+			$('#timepicker6').timepicker();
+			$('#timepicker7').timepicker();
+			$('#timepicker8').timepicker();
     </script>
 	    <script>
             $("input[name='temp']").TouchSpin({
