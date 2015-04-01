@@ -29,7 +29,7 @@
 							<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
 							</li>
 							<li class="divider"></li>
-							<li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+							<li><a href="index.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 							</li>
 						</ul>
 					</li>
@@ -88,7 +88,7 @@
                 <!-- /.dropdown -->
 				<div class="pull-right">
 				<li class="dropdown">
-				<a href="index.html" class="btn">
+				<a href="homePage.html" class="btn">
                        <i class="fa fa-home fa-fw"></i> Home
                 </a>
 				</li>
@@ -101,15 +101,15 @@
 	<table id="controlSection">
 	<img  id="thermostatGraphic" src="images/thermostatGraphic.svg"></img>
 		<tr><td><p id="targTempTitle">
-		Your Target Temperature Is
+		Your target temperature is
 		</p></td></tr>
 		<tr><td><div id="thermostatSection">
 			
 			<table id="controlPanel" class="inlineSection">
 				<tr>
 					<td>
-						<button class= "btn btn-default"><span class="glyphicon glyphicon-chevron-up"></span></button><br>
-						<button class= "btn btn-default"><span class="glyphicon glyphicon-chevron-down"></span></button>
+						<button class= "btn btn-default" onclick="plusTemp()"><span class="glyphicon glyphicon-chevron-up"></span></button><br>
+						<button class= "btn btn-default" onclick="minusTemp()"><span class="glyphicon glyphicon-chevron-down"></span></button>
 					</td>
 					<td>
 						<span class="inlineSection verticleAlignText" id="tempTextC">30°C</span> 
@@ -167,12 +167,12 @@
     				  <span class="caret"></span>
    					 </button>
   				  <ul class="dropdown-menu" role="menu">
-     					 <li><a href="#">Hold on</a></li>
-     					 <li><a href="#">Hold off</a></li>
+     					 <li><a href="#" id="holdon" onclick="holdOn()">Hold on</a></li>
+     					 <li><a href="#" id="holdoff" onclick="holdOff()">Hold off</a></li>
     				</ul>
  				 </div>
- 					<a type="button" class="btn btn-success buttonSizing">Send</a>
- 					<a type="button" class="btn btn-success buttonSizing">Run Schedule</a>
+ 					<a type="button" class="btn btn-success buttonSizing" onclick="confirmDialog('send')">Send</a>
+ 					<a type="button" class="btn btn-success buttonSizing" onclick="confirmDialog('run')">Run Schedule</a>
 				</div><br>
 			</tr>
 			</table>
@@ -184,5 +184,6 @@
 	<script src="js/bootstrap-select.js"></script>
 	<script src="js/metisMenu.min.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/homeFuncs.js"></script>
 	</body>
 </html>
