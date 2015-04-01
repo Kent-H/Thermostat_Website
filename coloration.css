@@ -1,7 +1,6 @@
 @font-face{
 	font-family: LiberationSans-Regular;
 	src: url('fonts/LiberationSans-Regular.ttf');
-	
 }
 @font-face{
 	font-family: LiberationSans-Bold;
@@ -18,27 +17,19 @@
 
  body{
 	font-family: LiberationSans-Regular;
-	padding-top:3.5em;
  }
 .active a{
-	background-color:#1B7F36 !important;
-	color: #35FF6C !important;
 	font-family:LiberationSans-Bold;
  }
-.containerColor{
-	background-color:#C0FFCF;
-}
-.container{
-    min-width: 340px !important;
+.container
+{
+    min-width: 500px !important;
 }
 .navbar-default .navbar-brand {
 	font-family: LiberationSans-Bold;
 	font-size:1.5em;
-  color: #0D401B;
 }
 .navbar-nav .nav{
-	color: #0D401B;
 }
 .logoutButton{
-	background-color: #16CCAE;
 }

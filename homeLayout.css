@@ -1,3 +1,6 @@
+label{
+	vertical-align:center;
+}
 #targTempTitle{
 	text-align: right;
 	padding-right:1em;
@@ -6,14 +9,56 @@
 	color: #0D401B;
 	font-family: LiberationSans-Bold;
 }
-#whatSchedText{
+#settingsButtons{
+	width:100%;
+}
+#controlPanel{
+	background-color:#CFC;
+	margin-left:0;
+	margin-right:0;
+	height:auto;
+	width:auto;
+}
+#controlSection{
+	float:right;
+}
+#thermostatChoice{
+	width:100% !important;
+}
+#tempTextC{
+	font-size:3em;
+	padding-left:.25em;
+}
+#tempTextF{
+	font-size:2em;
+	padding-left:.25em;
+}
+#tempChangeSection{
+	background-color:#CFC;
+	font-family:LiberationSans-Bold;
+}
+#holdButton{
+	width:100%;
+	color:#0D401B;
+}
+.schedText{
 	text-align: center;
-	padding-right:1em;
 	padding-top:.2em;
 	padding-bottom:.2em;
 	color: #0D401B;
 	font-family: LiberationSans-Bold;
-	font-size: 1.5em;
+	
+}
+.buttonAlignment{
+	text-align:right;
+}
+.buttonSizing{
+	width:33.3% !important;
+	
+	color:#0D401B;
+}
+.btn-group{
+	width:80%;
 }
 .inlineSection{
 	display: inline-block;
@@ -25,77 +70,86 @@
 	height:auto;
 	background-color: blue;
 }
-#controlPanel{
-	background-color:#28BF51;
-	margin-left:0;
-	margin-right:0;
-	height:auto;
-	width:auto;
-	float:right;
-}
-#thermostatChoice{
-	width:100% !important;
-}
-#tempChangeSection{
-	background-color:#28BF51;
-}
+
 @media(max-width:767px){
 	#thermostatGraphic{
 	width:auto;
 	height:20em;
-	margin-left:0em;
+	margin-left:13%;
 	margin-right:0em;
 	}
 	#targTempTitle{
-		font-size: 1.3em;
+		font-size: 1.5em;
 	}
 	#controlPanel{
-		margin-right:.25em;
-		padding:.3em;
-		min-width:12em;
+		margin-right:1em;
+		padding:.5em;
+		min-width:20em;
 	}
 	#tempChangeSection{
-		padding:.3em
+		padding:1em;
+		margin-left:.5em;
+		margin-right:1em;
+		margin-bottom:2em;
 	}
-}
-#tempTextC{
-	font-size:3em;
-	padding-left:.25em;
-}
-#tempTextF{
-	font-size:2em;
-	padding-left:.25em;
+	#schedText{
+		font-size: 1em;
+	}
+	#settingsButtons{
+		font-size:1.5em;
+	}
+	label{
+		font-size:.75em !important;
+	}
 }
 @media(min-width:768px){
 #thermostatGraphic{
+	margin-left:16%;
 	width:auto;
-	height:25em;
+	height:22em;
 	}
 	#targTempTitle{
 		font-size: 2em;
 	}
 	#controlPanel{
 		padding: 1em;
-		min-width:25em;
-		margin-right:1em;
+		min-width:28em;
+		margin-right:0em;
 	}
 	#tempChangeSection{
-		padding:1em
+		padding:1em;
+		padding-top:2em;
+		padding-bottom:2em;
+		margin-left:0em;
+		margin-right:0em;
+	}
+	#schedText{
+		font-size: 1.5em;
+	}
+	#settingsButtons{
+		font-size:2em;
+	}
+	label{
+		font-size:.5em !important;
 	}
 }
 @media(min-width:992px){
 	#thermostatGraphic{
 	width:auto;
-	height:30em;
+	height:23.5em;
 	}
 	#targTempTitle{
 		font-size: 2.6em;
 	}
 	#controlPanel{
 		
-		min-width:34em;
-		margin-right:2em;
+		min-width:100%;
+		margin-right:1em;
 	}
+	
 }
 @media(min-width:1200px){
+		#thermostatGraphic{
+	margin-left:25%;
+		}
 }
