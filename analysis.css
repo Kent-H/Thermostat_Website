@@ -1,13 +1,7 @@
 @CHARSET "utf-8";
 
-
-@font-face{
-	font-family: LiberationSans-Bold;
-	src: url('fonts/LiberationSans-Bold.ttf');
-}
-
 body{
-	font-family: LiberationSans-Bold;
+	background-color: #BFA;
 }
 
 .title{
@@ -19,7 +13,7 @@ body{
 	position:relative;
 	background-color:#FFF;
 	padding-bottom:0.2em;
-	border:0.5em solid #CFC;
+	border:0.5em solid #3B3;
 }
 
 .frameContainer {
@@ -61,7 +55,7 @@ body{
 }
 
 .lowerOptions{
-	background-color: #CFC;
+	background-color: #3B3;
 	padding:0.5em;
 }
 
