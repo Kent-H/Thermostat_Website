@@ -7,16 +7,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Thermostat | </title>
+    <title>Thermostat Analysis</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/metisMenu.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap-timepicker.min.css" rel="stylesheet">
-	<link href="css/bootstrap-touchspin.css" rel="stylesheet">
-	
-	<link href="analysis.css" rel="stylesheet">
+		<link href="css/bootstrap-timepicker.min.css" rel="stylesheet">
+		<link href="css/bootstrap-select.css" rel="stylesheet">
+		<link href="css/bootstrap-touchspin.css" rel="stylesheet">
+		<link href="analysis.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -149,8 +149,8 @@
         </nav>
 
         <!-- Page Content -->
-        <!--<div id="page-wrapper">-->
-        
+        <!-- div id="page-wrapper"-->
+        <div style="margin:0.5em">
         <div class="title">
 				Analysis of your schedule: <span id="name">Schedule_1</span>
 				</div>
@@ -192,12 +192,14 @@
 				</div>
 				
 				<div class="recommendation">
-					Recommendations:
+					Recommendation for:
 					
-					<select class="recommendations" onchange="changed(this)">
+					<select class="recommendations selectpicker" onchange="changed(this)">
 						<option>Schedule_1</option>
 						<option>Tom's Summer Schedule</option>
+						<option>Tom's Winter Schedule</option>
 					</select>
+					
 				</div>
 				
 				<div class="lowerOptions">
@@ -206,8 +208,13 @@
 					<br>
 					Use recommended schedule?
 					<br>
-					<input class="button" type="button" value="Use" onclick="confirmBox();"/>
-					<input class="button" type="button" value="Cancel" onclick="leave()"/>
+					<br>
+					
+					<div class="btn-group" role="group">
+					  <button class="btn btn-default btn-lg" onclick="confirmBox()">Use</button>
+					  <button class="btn btn-default btn-lg" onclick="leave()">Cancel</button>
+					</div>
+					
 				</div>
 				
 				<script>
@@ -224,9 +231,10 @@
 				}
 				</script>
         </div>
-        <!-- /#page-wrapper -->
+      </div>
+      <!-- /#page-wrapper -->
 
-    <!-- </div>
+    
     <!-- /#wrapper -->
 
     <script src="js/jquery.min.js"></script>
@@ -235,23 +243,7 @@
     <script src="js/theme.js"></script>
 	<script src="js/bootstrap-timepicker.min.js"></script>
 	<script src="js/bootstrap-touchspin.js"></script>
-    <script type="text/javascript">
-            $('#timepicker1').timepicker();
-			$('#timepicker2').timepicker();
-			$('#timepicker3').timepicker();
-			$('#timepicker4').timepicker();
-    </script>
-	        <script>
-            $("input[name='temp']").TouchSpin({
-                min: 10,
-                max: 45,
-                step: 0.5,
-                decimals: 1,
-                boostat: 5,
-                maxboostedstep: 10,
-                postfix: '°C'
-            });
-        </script>
+	<script src="js/bootstrap-select.js"></script>
 
 
 </body>
