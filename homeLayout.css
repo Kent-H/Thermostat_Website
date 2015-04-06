@@ -50,7 +50,7 @@ label{
 	
 }
 .buttonAlignment{
-	text-align:right;
+	text-align:left;
 }
 .buttonSizing{
 	width:33.3% !important;
@@ -58,7 +58,7 @@ label{
 	color:#0D401B;
 }
 .btn-group{
-	width:80%;
+	width:100%;
 }
 .inlineSection{
 	display: inline-block;
@@ -96,7 +96,7 @@ label{
 		font-size: 1em;
 	}
 	#settingsButtons{
-		font-size:1.5em;
+		font-size:2em;
 	}
 	label{
 		font-size:.75em !important;
