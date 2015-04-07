@@ -111,8 +111,8 @@
 					</td>
 				</tr>
 				<tr >
-					<td colspan="3" class="verticleAlignText"><br>     
-						    <select class="selectpicker">
+					<td colspan="3" class="verticleAlignText" ><br>     
+						    <select class="selectpicker input-small" data-width="95%">
 							<option>Thermostat x</option>
 							<option>Thermostat y</option>
 							<option>Thermostat z</option>
@@ -127,11 +127,16 @@
 						</td>
 				</tr>
 			</table>
-		</div></td></tr></table><br>
+		</div>
+		</td>
+		</tr>
+		</table><br><br>
 		<div id="tempChangeSection">
 		<table id="settingsButtons">
 		<tr>
-			<td>Mode:</td>
+		<td>Mode:</td>
+		</tr>
+		<tr>
 			<td class="buttonAlignment"> <div class="btn-group" data-toggle="buttons">
  				 <label class="btn btn-danger buttonSizing active"><input type="radio" value="heat">Heat</label>
  				 <label class="btn btn-info buttonSizing"><input type="radio" value="cool">Cool</label>
@@ -140,31 +145,33 @@
 			</td>
 			</tr>
 			<tr>
-			<td><br>Fan:</td>
+		<td>Fan:</td>
+		</tr>
+			<tr>
 			<td class="buttonAlignment">
-			<div class="btn-group" data-toggle="buttons"><br>
+			<div class="btn-group" data-toggle="buttons">
  				 <label class="btn btn-success buttonSizing active"><input type="radio" value="fanOn">On</label>
- 				 <label class="btn btn-success buttonSizing"><input type="radio" value="fanCirculate">Circulate</label>
+ 				 <label class="btn btn-success buttonSizing" id="circulateButton"><input type="radio" value="fanCirculate">Circulate</label>
  				 <label class="btn btn-success buttonSizing"><input type="radio" value="fanAuto">Auto</label>
 			</div><br>
 			</td>
 			</tr>
 			<tr>
 				<td class="buttonAlignment" colspan="2">
-				<div class="btn-group"><br>
+				<div class="btn-group" ><br>
   				<div  class="btn-group buttonSizing" role="group">
    					 <button id="holdButton" type="button" class="btn btn-success dropdown-toggle" 
    					 data-toggle="dropdown" aria-expanded="false">
     				  Hold on
-    				  <span class="caret"></span>
+    				  <span class="caret"></span><br><br>
    					 </button>
   				  <ul class="dropdown-menu" role="menu">
      					 <li><a href="#" id="holdon" onclick="holdOn()">Hold on</a></li>
      					 <li><a href="#" id="holdoff" onclick="holdOff()">Hold off</a></li>
     				</ul>
  				 </div>
- 					<a type="button" class="btn btn-success buttonSizing" onclick="confirmDialog('send')">Send</a>
- 					<a type="button" class="btn btn-success buttonSizing" onclick="confirmDialog('run')">Run Schedule</a>
+ 					<a type="button" class="btn btn-success buttonSizing" onclick="confirmDialog('send')">Send<br><br></a>
+ 					<a type="button" class="btn btn-success buttonSizing" onclick="confirmDialog('run')">Run <br>Schedule</a>
 				</div><br>
 			</tr>
 			</table>
