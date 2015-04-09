@@ -3,6 +3,7 @@ label{
 }
 h3{
 	padding-bottom:.5em;
+	text-align:center;
 }
 #targTempTitle{
 	text-align: right;
@@ -22,6 +23,8 @@ h3{
 }
 #controlSection{
 	width:100%;
+	background-color:#cfc;
+	padding:1em;
 }
 #thermostatChoice{
 	width:100% !important;
@@ -45,13 +48,17 @@ h3{
 #thermostatSection{
 	float:right;
 }
+#tempContainer{
+	height:auto;
+	background-color: blue;
+}
 .schedText{
 	text-align: center;
 	padding-top:.2em;
 	padding-bottom:.2em;
 	color: #0D401B;
 	font-family: LiberationSans-Bold;
-	
+	font-size:1em;
 }
 .buttonAlignment{
 	text-align:left;
@@ -69,10 +76,6 @@ h3{
 .vertAlignText{
 	vertical-align: middle;
 }
-#tempContainer{
-	height:auto;
-	background-color: blue;
-}
 span.glyphicon {
     font-size: 2em;
 }
@@ -84,21 +87,15 @@ span.glyphicon {
 	margin-right:0em;
 	}
 	#targTempTitle{
-		font-size: 1.2em;
+		font-size: 1.3em;
 	}
 	#controlPanel{
 		min-width:17em;
 		padding:.5em;
 	}
 	#tempChangeSection{
-		padding:1em;
 		margin-top:20px;
-		margin-left:.5em;
-		margin-right:.5em;
 		margin-bottom:2em;
-	}
-	#schedText{
-		font-size: 1em;
 	}
 	#settingsButtons{
 		font-size:2em;
@@ -117,6 +114,9 @@ span.glyphicon {
 	#thermostatSection{
 		margin-left:.5em;
 		margin-right:.5em;
+	}
+	.schedText{
+		font-size:1em;
 	}
 	.select.select-block .btn {
     width: 1em !important;
@@ -137,14 +137,8 @@ span.glyphicon {
 		min-width:22em;
 	}
 	#tempChangeSection{
-		padding:1em;
 		margin-top:20px;
-		margin-left:.5em;
-		margin-right:.5em;
 		margin-bottom:2em;
-	}
-	#schedText{
-		font-size: 1em;
 	}
 	#settingsButtons{
 		font-size:2em;
@@ -164,6 +158,9 @@ span.glyphicon {
 		margin-left:.5em;
 		margin-right:.5em;
 	}
+	.schedText{
+		font-size:1.3em;
+	}
 }
 @media(min-width:768px){
 #thermostatGraphic{
@@ -172,19 +169,15 @@ span.glyphicon {
 	
 	}
 	#targTempTitle{
-		font-size: 2em;
+		font-size: 2.2em;
 	}
 	#controlPanel{
 		padding: 1em;
 		min-width:30em;
+		height:22em;
 	}
 	#tempChangeSection{
 		padding:1em;
-		margin-left:.5em;
-		margin-right:.5em;
-	}
-	#schedText{
-		font-size: 1.5em;
 	}
 	#settingsButtons{
 		font-size:2em;
@@ -200,6 +193,9 @@ span.glyphicon {
 	label{
 		font-size:.5em !important;
 	}
+	.schedText{
+		font-size:1.7em;
+	}
 }
 @media(min-width:992px){
 	#thermostatGraphic{
@@ -212,11 +208,12 @@ span.glyphicon {
 	#controlPanel{
 		min-width:35em;
 	}
-	
+	.schedText{
+		font-size:2em;
+	}
 }
 @media(min-width:1200px){
 	#thermostatGraphic{
 		margin-left:25%;
 	}
-	
 }
