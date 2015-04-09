@@ -30,9 +30,9 @@ function confirmDialog(action){
 		}
 	}
 	else if(action == "run"){
-		var x = confirm("Run assigned schedule?");
+		var x = confirm("Run assigned schedule's temperature?");
 		if(x== true){
-			alert("Now running schedule X");
+			alert("Now schedule X's scheduled temperature");
 		}
 	}
 	else{}
