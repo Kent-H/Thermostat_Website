@@ -38,8 +38,14 @@ function confirmDialog(action){
 	else{}
 }
 function holdOn(){
-	document.getElementById("holdButton").innerHTML = "Hold on" + "<span class='caret'></span>";
+	document.getElementById("holdButton").innerHTML = "Hold on" + "<span class='caret'></span><br><br>";
 }
 function holdOff(){
-	document.getElementById("holdButton").innerHTML = "Hold off" + "<span class='caret'></span>";
+	document.getElementById("holdButton").innerHTML = "Hold off" + "<span class='caret'></span><br><br>";
+}
+function holdOnFN(){
+	document.getElementById("holdButton").innerHTML = "Tenir Allumé" + "<span class='caret'></span><br><br>";
+}
+function holdOffFN(){
+	document.getElementById("holdButton").innerHTML = "Tenir Éteindre" + "<span class='caret'></span><br><br>";
 }

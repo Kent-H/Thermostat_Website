@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="coloration.css">
+		<link rel="stylesheet" href="homeLayout.css">
+		<link href="css/bootstrap-select.css" rel="stylesheet">
+		<link href="css/metisMenu.min.css" rel="stylesheet">
+  	    <link href="css/style.css" rel="stylesheet">
+   		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<title>Peaksaver Accueil</title> 
+	</head>
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+				<ul class="nav navbar-top-links navbar-right pull-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<i class="fa fa-user fa-fw"></i> Username <i class="fa fa-caret-down"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-user">
+							<li><a href="#"><i class="fa fa-user fa-fw"></i>Profil</a>
+							</li>
+							<li><a href="#"><i class="fa fa-gear fa-fw"></i>Paramètres</a>
+							</li>
+							<li><a href="homePage.html"><i class="fa fa-font fa-fw"></i> English</a>
+							</li>
+							<li class="divider"></li>
+							<li><a href="index.html"><i class="fa fa-sign-out fa-fw"></i>Se Déconnecter</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<style>
+	#titlePage {text-decoration: underline;}
+</style>
+                <a id="titlePage" class="navbar-brand" href="homePageFrench.html">PeakSaver Accueil</a>
+            </div>
+			<!-- / Navigation Header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+			<li class="dropdown">
+                    <a href="viewThermostats.html" class="btn">
+                       Thermostats
+                    </a>
+			</li>
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-calendar fa-fw"></i>Les Horaires<i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user dropdown-menu-left">
+                        <li>
+                            <a href="viewSchedules.html">
+                                <div>
+                                     Voir Les Horaires
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="schedule-create.html">
+                                <div>
+                                     Créer Horaire
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a href="history-thermostat.html">
+                        <i class="fa fa-clock-o fa-fw"></i> Histoire
+                    </a>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+				
+            </ul>
+            <!-- /.navbar-top-links -->
+
+        </nav>
+        
+	<div class = "container">
+	<div id="controlSection">
+	<table style="width:100%">
+	
+		<tr>
+			<td>
+				<h3>Accueil</h3>
+			</td>
+			<td>
+				<div id="targTempTitle">
+					Température Cible Est
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">
+				<img  id="thermostatGraphic" src="images/thermostatGraphic.svg"></img>
+			</td>
+		<td><div id="thermostatSection">
+			
+			<table id="controlPanel" class="inlineSection">
+				<tr>
+					<td>
+						<button class= "btn btn-default" onclick="plusTemp()"><span class="glyphicon glyphicon-chevron-up"></span></button><br>
+						<button class= "btn btn-default" onclick="minusTemp()"><span class="glyphicon glyphicon-chevron-down"></span></button>
+					</td>
+					<td>
+						<span class="inlineSection verticleAlignText" id="tempTextC">30°C</span> 
+					</td>
+					<td>
+						<span class ="inlineSection verticleAlignText" id="tempTextF">86°F</span>
+					</td>
+				</tr>
+				<tr >
+					<td colspan="3" class="verticleAlignText" ><br>     
+						    <select class="selectpicker input-small" data-width="95%">
+							<option>Thermostat x</option>
+							<option>Thermostat y</option>
+							<option>Thermostat z</option>
+							</select>					
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><br>
+							<p class="schedText">En Utilisant Horaire </p>
+							<p class="schedText">"AAAAAAAAAAAAAAAAAAAA"</p>
+						</td>
+				</tr>
+			</table>
+		</div>
+		</td>
+		</tr>
+		</table></div>
+		<div id="tempChangeSection">
+		<table id="settingsButtons">
+		<tr>
+		<td>Mode:</td>
+		</tr>
+		<tr>
+			<td class="buttonAlignment"> <div class="btn-group" data-toggle="buttons">
+ 				 <label class="btn btn-danger buttonSizing active"><input type="radio" value="heat">Chauffer</label>
+ 				 <label class="btn btn-info buttonSizing"><input type="radio" value="cool">Refroidir</label>
+ 				 <label class="btn btn-success buttonSizing"><input type="radio" value="heat">Auto</label>
+			</div><br>
+			</td>
+			</tr>
+			<tr>
+		<td>Ventilateur:</td>
+		</tr>
+			<tr>
+			<td class="buttonAlignment">
+			<div class="btn-group" data-toggle="buttons">
+ 				 <label class="btn btn-success buttonSizing active"><input type="radio" value="fanOn">Allumé</label>
+ 				 <label class="btn btn-success buttonSizing" id="circulateButton"><input type="radio" value="fanCirculate">Diffuser</label>
+ 				 <label class="btn btn-success buttonSizing"><input type="radio" value="fanAuto">Auto</label>
+			</div><br>
+			</td>
+			</tr>
+			<tr>
+				<td class="buttonAlignment" colspan="2">
+				<div class="btn-group" ><br>
+  				<div  class="btn-group buttonSizing" role="group">
+   					 <button id="holdButton" type="button" class="btn btn-success dropdown-toggle" 
+   					 data-toggle="dropdown" aria-expanded="false">
+    				  Tenir Allumé
+    				  <span class="caret"></span><br><br>
+   					 </button>
+  				  <ul class="dropdown-menu" role="menu">
+     					 <li><a href="#" id="holdon" onclick="holdOnFN()">Tenir Allumé</a></li>
+     					 <li><a href="#" id="holdoff" onclick="holdOffFN()">Tenir Éteindre</a></li>
+    				</ul>
+ 				 </div>
+ 					<a type="button" class="btn btn-success buttonSizing" onclick="confirmDialog('send')">Envoyer<br><br></a>
+ 					<a type="button" class="btn btn-success buttonSizing" onclick="confirmDialog('run')">Utilisez <br>l'annexe</a>
+				</div><br>
+			</tr>
+			</table>
+		</div>
+	</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.js"></script>
+	<script src="js/metisMenu.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/homeFuncs.js"></script>
+	</body>
+</html>
