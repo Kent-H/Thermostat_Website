@@ -8,7 +8,7 @@ function plusTemp(){
 	document.getElementById("tempTextC").innerHTML = x + "°C";
 	document.getElementById("tempTextF").innerHTML = y + "°F";
 	}
-	else{}
+	else{} 
 }
 function minusTemp(){
 	var x = document.getElementById("tempTextC").innerHTML;
